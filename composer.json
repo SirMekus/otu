@@ -1,6 +1,6 @@
 {
-    "name": "sirmekus/igwe",
-    "description": "A PHP package for handling file uploads",
+    "name": "sirmekus/otu",
+    "description": "Otu is a PHP-based package to handle fine-formatting of string representation of numbers with their magnitude. For instance, '50m' means 50,000,000. We can decide to write the entire 50,000,000 or just pass it to this package in the form of '50m' and have it take care of the presentation",
     "type": "library",
     "license": "MIT",
     "authors": [

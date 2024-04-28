@@ -1,6 +1,6 @@
 # Igwe
 
-Otu is PHP-based package to handle fine-formatting of string representation of numbers with their magnitude. For instance, "50m" means 50,000,000. We can decide to write the entire 50,000,000 or just pass it to this package in the form of "50m" and have it take care of the presentation.
+Otu is a PHP-based package to handle fine-formatting of string representation of numbers with their magnitude. For instance, "50m" means 50,000,000. We can decide to write the entire 50,000,000 or just pass it to this package in the form of "50m" and have it take care of the presentation.
 
 > As typical of my packages, each usage introduces you to a new work in the Igbo language. You can be sure that "otu" is an Igbo word, and it means "one" which is actually a number anyway. You only need this "one" package, and without any dependencies, to improve productivity...#winks.
 
@@ -20,7 +20,6 @@ m: Million,
 b: Billion,
 t: trillion
 ---
-
 
 ## Usage
 
