@@ -26,24 +26,21 @@ class Otu
 		$afterPath = "";
 		$length = 0;
 		$strLength = 0;
-		//If a decimal part was supplied
+		
 		if (count($payload) > 1) {
-			//we only care about the second part, and will discard the others (if any)
 			$second = $payload[1];
-			//The number of decimal places supplied
+			
 			$strLength = strlen($second);
-			//We expect the max DP to be 3. For instance, 54.543.
+			
 			$length = abs(3 - $strLength);
-			//If the number of decimal places is less than 3, we pad with zeros
+			
 			$padded = str_pad('', $length, '0');
-			//Then we join the two parts. For instance, .55 becomes .550
+			
 			$afterPath = $second . $padded;
 		}
-		//Now we join the whole number with the 'decimal' part without the "." of course.
 		$final = $main . $afterPath;
-		//Now we determine the unit of the supplied figure
+		
 		$originalUnit = Instructor::craftFigureFromAbbreviation($abbreviation);
-		// echo $originalUnit;exit;
 	
 		if(!$originalUnit){
 			throw new OtuException("The magnitude '$abbreviation' is not supported.");
@@ -66,10 +63,6 @@ class Otu
 		$length = strlen($unit);
 		$lengthOfFigureValue = strlen($number);
 
-		/** 
-		* We make room for 'extra'. For instance, we know that 'thousand' has 4 figures in general, so 5000 is within 'thousand' magnitude.
-		* However, 65000 (and also 650000) is also within 'thousand' magnitude as well, thus should also be marked as correct. Anything not within this range shall be * considered invalid
-		**/
 		if($lengthOfFigureValue < $length or $lengthOfFigureValue > $length+2){
 			throw new OtuException("This is inconsistent for a number of $magnitude"." magnitude.");
 		}
