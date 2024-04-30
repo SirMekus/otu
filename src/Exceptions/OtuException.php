@@ -1,5 +1,5 @@
 <?php
-namespace Emmy\Exceptions;
+namespace Emmy\App\Exceptions;
 
 use Exception;
 class OtuException extends Exception 

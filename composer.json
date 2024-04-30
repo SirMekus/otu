@@ -1,6 +1,6 @@
 {
     "name": "sirmekus/otu",
-    "description": "Otu is a PHP-based package to handle fine-formatting of string representation of numbers with their magnitude. For instance, '50m' means 50,000,000. We can decide to write the entire 50,000,000 or just pass it to this package in the form of '50m' and have it take care of the presentation",
+    "description": "Otu is a PHP-based package to handle fine-formatting of string representation of (very) large numbers with their magnitude. For instance, '50m' means 50,000,000. We can decide to write the entire 50,000,000 or just pass it to this package in the form of '50m' and have it take care of the presentation",
     "type": "library",
     "license": "MIT",
     "authors": [
@@ -14,8 +14,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Emmy\\Assistant\\": "src/Services",
-            "Emmy\\Exceptions\\": "src/Exceptions"
+            "Emmy\\App\\": "src"
         },
         "files": [
             "src/helpers.php"
